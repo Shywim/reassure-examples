@@ -9,7 +9,9 @@ const AsyncComponent = () => {
   const [count, setCount] = React.useState(0);
 
   const handlePress = () => {
-    setTimeout(() => setCount((c) => c + 1), 10);
+    fetch('https://example.com').then(() => {
+      setCount((c) => c + 1);
+    });
   };
 
   return (
